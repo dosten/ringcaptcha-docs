@@ -1,0 +1,20 @@
+@import "ringcaptcha-css-toolkit/less/ringcaptcha";
+
+@import "sidebar";
+@import "headerlinks";
+@import "paragraphs";
+
+.page {
+  padding-bottom: 40px;
+}
+
+.hidden-key {
+  display: inline-block;
+  font-size: 0;
+
+  &:after {
+    cursor: pointer;
+    content: "•••••••";
+    font-size: 13px;
+  }
+}

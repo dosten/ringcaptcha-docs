@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="{{ encoding }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {{ metatags }}
+        <title>{{ title|striptags|e }}</title>
+        <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}">
+        <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}">
+        {% if favicon %}
+        <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}">
+        {% endif %}
+    </head>
+    <body>
+        <header class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{{ pathto(master_doc) }}">RingCaptcha Documentation</a>
+                </div>
+            </div>
+        </header>
+        <div class="container page">
+            <div class="row">
+                <div class="sidebar col-md-3 col-sm-4">
+                    {{ toctree(includehidden=True, collapse=False, maxdepth=3) }}
+                    {% if edit_on_github_url %}
+                    <p>
+                        <small><em>Found a typo or an error?</em></small><br>
+                        <small><em>Want to improve this document?</em> <a href="{{ edit_on_github_url }}">Edit it</a>.</small>
+                    </p>
+                    {% endif %}
+                </div>
+                <div class="document col-md-9 col-sm-8">
+                    <ol class="breadcrumb">
+                        <li><a href="{{ pathto(master_doc) }}">Docs</a></li>
+                        {% for parent in parents %}
+                            <li><a href="{{ parent.link|e }}">{{ parent.title }}</a></li>
+                        {% endfor %}
+                        <li class="active">{{ title }}</li>
+                    </ol>
+                    {% block body %}{% endblock %}
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="build">Built with <span class="love" title="love"></span> from Palo Alto &amp; BA</div>
+            <div class="institutional">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">Copyright &copy; RingCaptcha 2015. All Rights Reserved.</div>
+                        <div class="col-md-6">
+                            <ul class="list-inline pull-right" style="margin: 0">
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms of Service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+        var options = {
+            zeroclipboard: {
+                swfPath: "{{ pathto('_static/swf/zeroclipboard.swf', 1) }}"
+            }
+        };
+        </script>
+        <script src="{{ pathto('_static/js/vendor.js', 1) }}"></script>
+        <script src="{{ pathto('_static/js/app.js', 1) }}"></script>
+    </body>
+</html>
