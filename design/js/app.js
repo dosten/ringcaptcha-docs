@@ -27,9 +27,9 @@ client.on('error', function () {
 $('div.highlight pre').each(function () {
   var contents = this.innerHTML.replace(/__(PUBLIC_KEY|SECRET_KEY)__/g, function(match) {
     if (match === '__PUBLIC_KEY__') {
-      return '<span class="rewrite-key" data-value="public-key">' + match + '</span>';
+      return '<span class="rewrite-key" data-value="public-key"></span>';
     } else if (match === '__SECRET_KEY__') {
-      return '<span class="rewrite-key hidden-key" data-value="secret-key" data-toggle="tooltip" data-placement="top" title="Copy paste includes secret keys.">' + match + '</span>';
+      return '<span class="rewrite-key" data-value="secret-key"></span>';
     }
   });
   $(this).html(contents);

@@ -9,11 +9,12 @@
 }
 
 .hidden-key {
+  display: inline-block;
   font-size: 0;
-}
 
-.hidden-key:after {
-  cursor: pointer;
-  content: "•••••••";
-  font-size: 13px;
+  &:after {
+    cursor: pointer;
+    content: "•••••••";
+    font-size: 13px;
+  }
 }
