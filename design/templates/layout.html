@@ -29,10 +29,12 @@
             <div class="row">
                 <div class="sidebar col-md-3 col-sm-4">
                     {{ toctree(includehidden=True, collapse=False, maxdepth=3) }}
+                    {% if edit_on_github_url %}
                     <p>
                         <small><em>Found a typo or an error?</em></small><br>
-                        <small><em>Want to improve this document?</em> <a href="#">Edit it</a>.</small>
+                        <small><em>Want to improve this document?</em> <a href="{{ edit_on_github_url }}">Edit it</a>.</small>
                     </p>
+                    {% endif %}
                 </div>
                 <div class="col-md-9 col-sm-8">
                     <ol class="breadcrumb">
