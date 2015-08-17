@@ -25,7 +25,7 @@ gulp.task('scripts', function () {
 
 gulp.task('styles', function () {
   gulp.src('design/less/docs.less')
-    .pipe(less({ paths: ['node_modules/ringcaptcha-css-toolkit/css'] }))
+    .pipe(less({ paths: ['node_modules'] }))
     .pipe(minify({ keepSpecialComments: 0 }))
     .pipe(gulp.dest('build/theme/ringcaptcha/static/css'))
 });
