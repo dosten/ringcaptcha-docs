@@ -1,0 +1,21 @@
+{
+  "name": "ringcaptcha-docs",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "author": "Diego Saint Esteben <diego@saintesteben.me>",
+  "scripts": {
+    "build": "gulp build"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.5",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-less": "^3.0.3",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0",
+    "jquery": "^2.1.4",
+    "ringcaptcha-css-toolkit": "git://github.com/dosten/ringcaptcha-css-toolkit.git#master",
+    "zeroclipboard": "^2.2.0"
+  }
+}
