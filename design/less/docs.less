@@ -1,22 +1,11 @@
 @import (less) "ringcaptcha.css";
 
+@import "sidebar";
+@import "headerlinks";
+@import "paragraphs";
+
 .page {
   padding-bottom: 40px;
-}
-
-a.headerlink {
-    display: none;
-}
-
-:hover > a.headerlink {
-    display: inline;
-    color: #B5B9BD;
-    font-weight: normal;
-}
-
-:hover > a.headerlink:hover {
-    color: #2eb0f7;
-    text-decoration: none;
 }
 
 .hidden-key {
@@ -27,30 +16,4 @@ a.headerlink {
   cursor: pointer;
   content: "•••••••";
   font-size: 13px;
-}
-
-// List options
-
-.sidebar > ul {
-  .list-unstyled();
-
-  > li > ul > a.current {
-    font-weight: 600;
-    text-decoration: none;
-  }
-
-  > li > ul {
-    .list-unstyled();
-    margin-bottom: 20px;
-  }
-
-  > li > a {
-      display: block;
-      margin-bottom: 20px;
-      color: #000;
-      font-weight: 500;
-      padding: 0;
-      font-size: 14px;
-      text-transform: uppercase;
-  }
 }

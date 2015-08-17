@@ -9,6 +9,6 @@ are available under Open Source licenses.
    :titlesonly:
 
    php
-   javascript
+   node
    python
    ruby

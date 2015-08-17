@@ -1,0 +1,33 @@
+.sidebar > ul {
+  .list-unstyled();
+
+  li {
+    line-height: 1.7;
+  }
+
+  > li > ul {
+    .list-unstyled();
+    margin-bottom: 20px;
+
+    & > li {
+      > a.current {
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      &:not(.current) > ul {
+        display: none;
+      }
+    }
+  }
+
+  > li > a {
+      display: block;
+      margin-bottom: 20px;
+      color: #000;
+      font-weight: 500;
+      padding: 0;
+      font-size: 12px;
+      text-transform: uppercase;
+  }
+}
