@@ -7,9 +7,10 @@ var minify = require('gulp-minify-css');
 
 gulp.task('vendors', function () {
   var paths = [
-    'node_modules/jquery/dist/jquery.js',
-    'node_modules/bootstrap/dist/js/bootstrap.js',
-    'node_modules/zeroclipboard/dist/ZeroClipboard.js',
+    'bower_components/jquery/dist/jquery.js',
+    'bower_components/bootstrap/dist/js/bootstrap.js',
+    'bower_components/zeroclipboard/dist/ZeroClipboard.js',
+    'bower_components/jquery-pjax/jquery.pjax.js',
   ];
   return gulp.src(paths)
     .pipe(concat('vendor.js'))
@@ -25,13 +26,13 @@ gulp.task('scripts', function () {
 
 gulp.task('styles', function () {
   gulp.src('design/less/docs.less')
-    .pipe(less({ paths: ['node_modules'] }))
+    .pipe(less({ paths: ['bower_components'] }))
     .pipe(minify({ keepSpecialComments: 0 }))
     .pipe(gulp.dest('build/theme/ringcaptcha/static/css'))
 });
 
 gulp.task('fonts', function () {
-  gulp.src('node_modules/ringcaptcha-css-toolkit/fonts/*')
+  gulp.src('bower_components/ringcaptcha-css-toolkit/fonts/*')
     .pipe(gulp.dest('build/theme/ringcaptcha/static/fonts'))
 });
 
@@ -41,7 +42,7 @@ gulp.task('images', function () {
 });
 
 gulp.task('assets', function () {
-  gulp.src('node_modules/zeroclipboard/dist/ZeroClipboard.swf')
+  gulp.src('bower_components/zeroclipboard/dist/ZeroClipboard.swf')
     .pipe(rename('zeroclipboard.swf'))
     .pipe(gulp.dest('build/theme/ringcaptcha/static/swf'));
 });

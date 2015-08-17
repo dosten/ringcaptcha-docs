@@ -1,0 +1,16 @@
+{
+  "name": "ringcaptcha-docs",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ringcaptcha/ringcaptcha-docs",
+  "authors": [
+    "Diego Saint Esteben <diego@saintesteben.me>"
+  ],
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4",
+    "jquery-pjax": "~1.9.6",
+    "font-awesome": "~4.4.0",
+    "zeroclipboard": "~2.2.0"
+  }
+}
